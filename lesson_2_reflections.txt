@@ -1,3 +1,8 @@
 What happens when you initialize a repository? Why do you need to do it?
 
 git init: create a new repository. git creates a .git directory and it's the hidden directory that will track all versions of the files in the repository. It's the first step to start version control in git.
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+it's something in between the working directory and the repository. It helps to logically separates what files are going to be committed to the repository and what files will stay in working directory without tracking the versions. Sometimes, i may not want to version control all the files in my working directory. staging area allows me to do so. Also, i can add all the files that i want to have version control to the staging area and easily commit them all at once.
+
