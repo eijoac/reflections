@@ -2,7 +2,44 @@ What happens when you initialize a repository? Why do you need to do it?
 
 git init: create a new repository. git creates a .git directory and it's the hidden directory that will track all versions of the files in the repository. It's the first step to start version control in git.
 
+
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
 it's something in between the working directory and the repository. It helps to logically separates what files are going to be committed to the repository and what files will stay in working directory without tracking the versions. Sometimes, i may not want to version control all the files in my working directory. staging area allows me to do so. Also, i can add all the files that i want to have version control to the staging area and easily commit them all at once.
 
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+git add: use it to add file to staging area for preparation of git commit.
+
+git diff: compare files in working directory and staging area
+git --staged: compare files in staging area and most recent commit in repository.
+
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+git branch new_branch_name
+git checkout new_branch_name
+git checkout -b new_brach_name: combine the above two commands
+git checkout master: return to the master branch
+In cases that i want to do some big experiment work on my code but still want to have the previous code as my official version.Branch allows me to creat a new "route" in the development process.
+
+git log --graph --oneline master coins
+
+
+How do the diagrams help you visualize the branch structure?
+
+helped me understand the branch concept and the possible "lost" commit - the unreachable commit. Since a commit only knows its parents, if we create a commit without brach name, when we switch to another branch, we will lose that commit.
+
+git merge branch2 branch 3: while running this command, if i am currently checked out at branch 1, git will also merge it to branch 1.
+git show commit_id: compare a commit to its parent.
+
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+The work on the two braches will combine. After the latest commit will have two parents.
+
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+auto merge. pro: easy; con: sometime don't know how to resolve basic conflict
+merge mannually. pro: won't have conflict; con: sometimes tedious work.
