@@ -4,6 +4,7 @@ git config --global credential.helper wincred
 git remote
 
 git remote add origin https://github.com/eijoac/reflections.git
+origin refer to the shortname of the repository on github within this repository
 
 git remote -v
 
@@ -12,3 +13,6 @@ git remote origin master
 When would you want to use a remote repository rather than keeping all your work local?
 
 When I want to work on different computers for the same project; when a team is working on the same project.
+
+git push origin master
+git pull origin master
