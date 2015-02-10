@@ -8,3 +8,7 @@ git remote add origin https://github.com/eijoac/reflections.git
 git remote -v
 
 git remote origin master
+
+When would you want to use a remote repository rather than keeping all your work local?
+
+When I want to work on different computers for the same project; when a team is working on the same project.
